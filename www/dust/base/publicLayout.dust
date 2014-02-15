@@ -1,0 +1,7 @@
+<div class="cover-container">
+    <header id="header-region" class="masthead clearfix"></header>
+
+    <div id="main-region"></div>
+
+    <footer id="footer-region"></footer>
+</div>
