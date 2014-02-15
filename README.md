@@ -1,2 +1,2 @@
 ## Airborne
-Based on [https://github.com/justinsisley/Mercenary](Mercenary), Airborne is the force multiplier PhoneGap stack.
+Based on [Mercenary](https://github.com/justinsisley/Mercenary), Airborne is the force multiplier PhoneGap stack.
