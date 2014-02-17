@@ -51,30 +51,11 @@ define([
     dashboardController
 ) {
     return {
-        home: function() {
-            this.showPublicLayout();
-
-            homeController.show();
-
-            App.vent.trigger('domchange:title');
-            App.vent.trigger('baseController:home');
-        },
-
-        features: function() {
-            this.showPublicLayout();
-
-            featuresController.show();
-
-            App.vent.trigger('domchange:title', 'Features');
-            App.vent.trigger('baseController:features');
-        },
-
         signup: function() {
             this.showPublicLayout();
 
             signupController.show();
 
-            App.vent.trigger('domchange:title', 'Sign Up');
             App.vent.trigger('baseController:signup');
         },
 
@@ -83,20 +64,14 @@ define([
 
             loginController.show();
 
-            App.vent.trigger('domchange:title', 'Log In');
             App.vent.trigger('baseController:login');
         },
 
         dashboard: function() {
-            if (!App.vars.user) {
-                return Backbone.history.navigate('/login', true);
-            }
-
             this.showAppLayout();
 
             dashboardController.show();
 
-            App.vent.trigger('domchange:title', 'Dashboard');
             App.vent.trigger('baseController:dashboard');
         },
 

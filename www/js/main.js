@@ -3,33 +3,22 @@
  */
 define([
     'app',
-    'modules/base/routers/baseRouter'
+    'modules/base/controllers/baseController'
 ], function(
     App,
-    BaseRouter
+    baseController
 ) {
     // Bootstrap the application
     App.addInitializer(function() {
         // A place to store things
         App.vars = {};
 
-        // Instantiate router(s)
-        App.routers = {
-            baseRouter : new BaseRouter()
-        };
-
-        // Start Backbone.history
-        Backbone.history.start({
-            root: '/',
-            pushState: true
-        });
-
-        // Force the initial route
-        // since we aren't in a traditional
-        // web browser environment.
-        Backbone.history.navigate('/', true);
+        // Show the dashboard
+        baseController.dashboard();
     });
 
+    // Once the device is ready,
+    // start the application.
     document.addEventListener('deviceready', function() {
         App.start();
     }, false);
