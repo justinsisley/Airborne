@@ -107,6 +107,20 @@ module.exports = function(grunt) {
                     stdout: true,
                     stderr: true
                 }
+            },
+            ios: {
+                command: 'phonegap run ios',
+                options: {
+                    stdout: true,
+                    stderr: true
+                }
+            },
+            ripple: {
+                command: 'ripple emulate -port 8743',
+                options: {
+                    stdout: true,
+                    stderr: true
+                }
             }
         },
         watch: {
@@ -204,6 +218,10 @@ module.exports = function(grunt) {
         'less:prd',
         'clean:tmp'
     ]);
+
+    grunt.registerTask('dev', ['default', 'watch']);
+    grunt.registerTask('ripple', ['shell:ripple']);
+    grunt.registerTask('ios', ['default', 'requirejs', 'shell:ios']);
 
     grunt.registerTask('test', ['connect:test', 'shell:test']);
 
