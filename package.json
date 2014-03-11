@@ -4,7 +4,7 @@
   "homepage": "https://github.com/justinsisley/Airborne",
   "version": "0.0.3",
   "javascriptVersion": "117",
-  "cssVersion": "14",
+  "cssVersion": "25",
   "fontVersion": "0",
   "private": true,
   "scripts": {
