@@ -2,9 +2,9 @@
   "name": "airborne",
   "description": "The Force Multiplier PhoneGap Stack",
   "homepage": "https://github.com/justinsisley/Airborne",
-  "version": "0.0.3",
-  "javascriptVersion": "117",
-  "cssVersion": "25",
+  "version": "0.0.4",
+  "javascriptVersion": "5",
+  "cssVersion": "2",
   "fontVersion": "0",
   "private": true,
   "scripts": {

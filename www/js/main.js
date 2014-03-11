@@ -17,11 +17,19 @@ define([
         baseController.dashboard();
     });
 
-    // Once the device is ready,
-    // start the application.
-    // document.addEventListener('deviceready', function() {
-    App.start();
-    // }, false);
-
+    // If we're on a mobile device, assume
+    // the PhoneGap library is available,
+    // and that the "deviceready" event will
+    // fire. Otherwise, we're probably in a
+    // desktop browser during development,
+    // so we just start the app.
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+        document.addEventListener('deviceready', function() {
+            App.start();
+        }, false);
+    } else {
+        App.start();
+    }
+    
     return App;
 });
