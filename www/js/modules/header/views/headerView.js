@@ -1,13 +1,13 @@
 define([
+    'app',
     'marionette',
 
-    'modules/home/templates/home'
+    'modules/header/templates/header'
 ], function(
+    App,
     Marionette
 ) {
     return Marionette.ItemView.extend({
-        template: 'home/home',
-
-        className: 'inner cover'
+        template: 'header/header'
     });
 });

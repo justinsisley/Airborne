@@ -1,19 +1,14 @@
 define([
     'marionette',
-    'holder',
 
-    'modules/dashboard/templates/dashboard'
+    'modules/dashboard/templates/dashboard',
+    'ratchet'
 ], function(
-    Marionette,
-    holder
+    Marionette
 ) {
     return Marionette.ItemView.extend({
         template: 'dashboard/dashboard',
 
-        onRender: function() {
-            setTimeout(function() {
-                holder.run();
-            }, 0);
-        }
+        className: 'content'
     });
 });

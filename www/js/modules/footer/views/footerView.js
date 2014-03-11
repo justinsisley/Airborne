@@ -1,11 +1,11 @@
 define([
     'marionette',
 
-    'modules/sidebar/templates/sidebar'
+    'modules/footer/templates/footer'
 ], function(
     Marionette
 ) {
     return Marionette.ItemView.extend({
-        template: 'sidebar/sidebar'
+        template: 'footer/footer'
     });
 });

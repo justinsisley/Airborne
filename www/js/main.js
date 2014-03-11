@@ -19,9 +19,9 @@ define([
 
     // Once the device is ready,
     // start the application.
-    document.addEventListener('deviceready', function() {
-        App.start();
-    }, false);
+    // document.addEventListener('deviceready', function() {
+    App.start();
+    // }, false);
 
     return App;
 });

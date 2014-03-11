@@ -23,8 +23,7 @@ module.exports = function(grunt) {
         concat: {
             less: {
                 src: [
-                    // Reset disabled. Using Bootstrap 3.
-                    // 'client/less/utils/reset.less',
+                    // Reset disabled. Using Ratchet.
                     'www/less/**/!(reset).less'
                 ],
                 dest: 'tmp/dist.less'
@@ -33,7 +32,8 @@ module.exports = function(grunt) {
         less: {
             dev: {
                 src: [
-                    'www/vendor/bootstrap/dist/css/bootstrap.css',
+                    'www/vendor/ratchet/dist/css/ratchet.css',
+                    'www/vendor/ratchet/dist/css/ratchet-theme-ios.css',
                     'tmp/dist.less'
                 ],
                 dest: 'www/css/style.css'
@@ -43,7 +43,8 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 src: [
-                    'www/vendor/bootstrap/dist/css/bootstrap.css',
+                    'www/vendor/ratchet/dist/css/ratchet.css',
+                    'www/vendor/ratchet/dist/css/ratchet-theme-ios.css',
                     'tmp/dist.less'
                 ],
                 dest: 'www/css/style.css'
